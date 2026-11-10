@@ -1,0 +1,6 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import ProductTile from '@/components/ProductTile';
+import { products } from '@/data/products';
+export const metadata:Metadata={title:'Workstations'};
+export default function WorkstationsPage(){const items=products.filter(p=>p.category==='Workstations');return <main><section className="bg-[#edf0f2] py-20"><div className="container-shell"><div className="eyebrow mb-5">BSS workspace solutions</div><h1 className="section-title max-w-3xl">Workstations and office tables, planned around your space.</h1><p className="mt-5 max-w-2xl text-sm leading-7 text-[#586977]">Explore workstation, executive table, manager table, staff table and meeting table ranges shown in the BSS catalogue. Model references are retained as published in the catalogue.</p></div></section><section className="section-pad"><div className="container-shell"><div className="mb-10 flex items-center justify-between"><p className="text-xs text-[#647278]">Workstation and table categories</p><Link href="/catalogue" className="text-xs font-semibold text-[#092b4c] underline underline-offset-4">Download workstation catalogue</Link></div><div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">{items.map((p,i)=><ProductTile key={p.slug} product={p} index={i}/>)}</div></div></section></main>}

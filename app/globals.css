@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #ffffff; color: #092b4c; font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #ffd8da; color: #092b4c; }
+.container-shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.eyebrow { letter-spacing: .18em; text-transform: uppercase; font-size: 10px; font-weight: 700; color: #e3262e; }
+.section-pad { padding-block: 88px; }
+.display-title { font-size: clamp(2.6rem, 6vw, 5.8rem); line-height: .98; letter-spacing: -.065em; font-weight: 500; }
+.section-title { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.04; letter-spacing: -.05em; font-weight: 500; }
+.image-placeholder { position: relative; overflow: hidden; background: linear-gradient(135deg, #edf0f2 0%, #d9e0e6 52%, #bcc8d2 100%); }
+.image-placeholder::before { content: ''; position: absolute; inset: 12% 17%; border: 1px solid rgba(255,255,255,.55); border-radius: 2px; transform: skewY(-8deg); }
+.image-placeholder::after { content: ''; position: absolute; width: 46%; height: 54%; left: 27%; bottom: 8%; border-radius: 48% 48% 12% 12%; background: linear-gradient(145deg, rgba(255,255,255,.72), rgba(9,43,76,.16)); box-shadow: 24px 22px 55px rgba(31,43,43,.16); }
+.product-placeholder::after { width: 34%; height: 48%; left: 33%; bottom: 14%; border-radius: 42% 42% 18% 18%; }
+@media (max-width: 700px) {
+  .container-shell { width: min(100% - 36px, 1180px); }
+  .section-pad { padding-block: 62px; }
+}

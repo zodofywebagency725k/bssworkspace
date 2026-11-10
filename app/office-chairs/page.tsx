@@ -1,0 +1,6 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import ProductTile from '@/components/ProductTile';
+import { products } from '@/data/products';
+export const metadata:Metadata={title:'Office Chairs'};
+export default function ChairsPage(){const items=products.filter(p=>p.category==='Office Chairs');return <main><section className="bg-[#edf0f2] py-20"><div className="container-shell"><div className="eyebrow mb-5">BSS seating collection</div><h1 className="section-title max-w-3xl">Office seating for every kind of workspace.</h1><p className="mt-5 max-w-2xl text-sm leading-7 text-[#586977]">Explore the seating categories and model names presented in the BSS office chairs catalogue. Product photography and detailed specifications will be added in a later update.</p></div></section><section className="section-pad"><div className="container-shell"><div className="mb-10 flex items-center justify-between"><p className="text-xs text-[#647278]">Chair categories from the BSS catalogue</p><Link href="/catalogue" className="text-xs font-semibold text-[#092b4c] underline underline-offset-4">Download chair catalogue</Link></div><div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">{items.map((p,i)=><ProductTile key={p.slug} product={p} index={i}/>)}</div></div></section></main>}

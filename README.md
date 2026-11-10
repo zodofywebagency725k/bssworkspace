@@ -1,34 +1,34 @@
-# BSS Workspace website
+# BSS Workspace — Next.js website
+Development website for Bangalore Seating Systems (BSS), built with Next.js App Router, TypeScript, Tailwind CSS and Lucide icons.
 
-A responsive, static website starter for Bengaluru Seating Systems (BSS Workspace), inspired by the premium editorial layout of the reference site while using original copy and a furniture-focused information architecture.
+## Included now
+- Responsive homepage and navigation
+- Office chairs and workstation category pages
+- About BSS page based on the supplied catalogues
+- Contact page with confirmed phone, email and factory address
+- Click-to-call, WhatsApp and email enquiry links
+- Downloadable chair and workstation catalogue PDFs
+- Supplied BSS logo
+- Catalogue-derived chair collection names and workstation/table model references
 
-## Files
-- `index.html` — page structure and content
-- `styles.css` — responsive styling, layouts, colors, and image references
-- `script.js` — mobile navigation and current year
+## To add later
+- Approved product photographs in `public/images/chairs/` and `public/images/workstations/`
+- Google Maps location link
+- Approved project photographs and additional company information
+- Detailed specifications and product-level pages after product photo/model mapping is confirmed
 
-## Run locally
-Open `index.html` in a browser, or run a local static server from this folder:
+Product photography placeholders are intentional. No generic chair photos have been substituted for BSS products.
 
-```bash
-python -m http.server 8080
-```
+## Local development
+1. Install Node.js 20.9 or later.
+2. Run `npm install`.
+3. Run `npm run dev`.
+4. Open http://localhost:3000.
 
-Then visit `http://localhost:8080`.
+Run `npm run build` to test a production build.
 
-## Deploy to Vercel
-1. Create a GitHub repository and upload these three website files plus this README.
-2. In Vercel, choose **Add New → Project** and import the repository.
-3. Framework preset: **Other**. Build command: leave empty. Output directory: `.` (the repository root).
-4. Deploy. Vercel will provide a preview URL.
-5. Add your purchased domain in the Vercel project's **Settings → Domains** and follow the DNS instructions shown there.
+## Vercel preview
+Development branch: `nextjs-build`. Keep the existing `main` branch and production domain unchanged until preview review. Vercel Hobby should be used for preview/development only; review a commercial plan before using the site for BSS business production.
 
-## Required before public launch
-1. Replace `ADD_YOUR_BUSINESS_EMAIL_HERE` in `index.html` with the official BSS business email.
-2. Confirm the official domain (for example, the full domain including `.com` or another extension) before connecting DNS.
-3. Replace sample stock photography with approved BSS product photos for accurate product representation.
-4. Review all product/service wording and add confirmed phone, address, privacy policy, and any real certifications only when provided.
-
-## Notes
-- Stock images load from Unsplash over the internet. For production, use properly licensed, approved images hosted in the project or a trusted image CDN.
-- This is a front-end website starter. No database or inquiry form backend is configured yet.
+## Accuracy
+Catalogue names and model references are transcribed from the two BSS PDFs supplied for this project. Specifications are not inferred where the catalogues do not provide them.
