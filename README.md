@@ -1,34 +1,35 @@
-# BSS Workspace website
+# BSS Workspace — Next.js starter
 
-A responsive, static website starter for Bengaluru Seating Systems (BSS Workspace), inspired by the premium editorial layout of the reference site while using original copy and a furniture-focused information architecture.
+Premium corporate website foundation for Bangalore Seating Systems.
 
-## Files
-- `index.html` — page structure and content
-- `styles.css` — responsive styling, layouts, colors, and image references
-- `script.js` — mobile navigation and current year
+## Stack
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Lucide React
 
-## Run locally
-Open `index.html` in a browser, or run a local static server from this folder:
+## Local development
+1. Install Node.js 20.9 or later.
+2. Run `npm install`.
+3. Run `npm run dev`.
+4. Open http://localhost:3000.
 
-```bash
-python -m http.server 8080
-```
+## Production build check
+Run `npm run build`.
 
-Then visit `http://localhost:8080`.
+## Assets to add
+- Company logo: `public/images/logo/bss-logo.svg` or `.png`
+- Chair photos: `public/images/chairs/`
+- Workstation photos: `public/images/workstations/`
+- Project photos: `public/images/projects/`
+- Approved catalogue PDF: `public/catalogues/bss-catalogue.pdf`
 
-## Deploy to Vercel
-1. Create a GitHub repository and upload these three website files plus this README.
-2. In Vercel, choose **Add New → Project** and import the repository.
-3. Framework preset: **Other**. Build command: leave empty. Output directory: `.` (the repository root).
-4. Deploy. Vercel will provide a preview URL.
-5. Add your purchased domain in the Vercel project's **Settings → Domains** and follow the DNS instructions shown there.
+The catalogue page intentionally shows a "coming soon" state until the approved PDF is added. Product cards are placeholders until the real BSS product catalogue and images are supplied.
 
-## Required before public launch
-1. Replace `ADD_YOUR_BUSINESS_EMAIL_HERE` in `index.html` with the official BSS business email.
-2. Confirm the official domain (for example, the full domain including `.com` or another extension) before connecting DNS.
-3. Replace sample stock photography with approved BSS product photos for accurate product representation.
-4. Review all product/service wording and add confirmed phone, address, privacy policy, and any real certifications only when provided.
+## Vercel
+Import the GitHub repository into Vercel and use the Next.js framework preset. Keep the root directory as `./`. Vercel detects the build command automatically.
 
-## Notes
-- Stock images load from Unsplash over the internet. For production, use properly licensed, approved images hosted in the project or a trusted image CDN.
-- This is a front-end website starter. No database or inquiry form backend is configured yet.
+Before replacing the existing repository, preserve a copy/branch of the current files. Do not change production domain settings until preview testing is complete.
+
+## Content accuracy
+Company history, certifications, product models, specifications, contact details and project claims are intentionally not invented. Add only BSS-approved information.
