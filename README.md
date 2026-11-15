@@ -1,34 +1,69 @@
-# BSS Workspace website
+# BSS Workspace – Next.js website package
 
-A responsive, static website starter for Bengaluru Seating Systems (BSS Workspace), inspired by the premium editorial layout of the reference site while using original copy and a furniture-focused information architecture.
+This package contains the current BSS Next.js website project, the supplied BSS logo and catalogues, and the supplied product photographs.
 
-## Files
-- `index.html` — page structure and content
-- `styles.css` — responsive styling, layouts, colors, and image references
-- `script.js` — mobile navigation and current year
+## Product photography included
+- Office chairs: 11 PNG photographs
+- Workstations and tables: 13 PNG photographs
+- Storage: 7 PNG photographs
 
-## Run locally
-Open `index.html` in a browser, or run a local static server from this folder:
+The supplied product photographs are converted to high-quality WebP (quality 88, maximum 2200px on the longest side) for faster page loading and smaller GitHub uploads. The source archives remain unchanged.
+
+## Main routes
+- `/` – Home
+- `/office-chairs` – Chair photo gallery and catalogue ranges
+- `/workstations` – Workstation and table photo gallery and catalogue ranges
+- `/storage` – Storage photo gallery
+- `/about` – About BSS
+- `/catalogue` – Catalogue PDF downloads
+- `/contact` – BSS contact information
+
+## Local development
+Requires Node.js 20.9 or newer.
 
 ```bash
-python -m http.server 8080
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8080`.
+## Production build check
+```bash
+npm run build
+```
 
-## Deploy to Vercel
-1. Create a GitHub repository and upload these three website files plus this README.
-2. In Vercel, choose **Add New → Project** and import the repository.
-3. Framework preset: **Other**. Build command: leave empty. Output directory: `.` (the repository root).
-4. Deploy. Vercel will provide a preview URL.
-5. Add your purchased domain in the Vercel project's **Settings → Domains** and follow the DNS instructions shown there.
+## GitHub / Vercel update
+1. Extract this ZIP.
+2. Open the existing BSS GitHub repository and select the `nextjs-build` branch.
+3. Upload the contents of the `bssworkspace-nextjs` folder to the repository root, replacing files with the same paths.
+4. Commit to `nextjs-build` only. Do not replace or delete `main`.
+5. Wait for Vercel to complete a fresh deployment, then test the deployment URL.
 
-## Required before public launch
-1. Replace `ADD_YOUR_BUSINESS_EMAIL_HERE` in `index.html` with the official BSS business email.
-2. Confirm the official domain (for example, the full domain including `.com` or another extension) before connecting DNS.
-3. Replace sample stock photography with approved BSS product photos for accurate product representation.
-4. Review all product/service wording and add confirmed phone, address, privacy policy, and any real certifications only when provided.
+The existing Vercel Hobby project should be used for preview/development only; review the appropriate commercial hosting plan before using the site as a commercial production website.
 
-## Notes
-- Stock images load from Unsplash over the internet. For production, use properly licensed, approved images hosted in the project or a trusted image CDN.
-- This is a front-end website starter. No database or inquiry form backend is configured yet.
+## Content accuracy
+Product photo captions are descriptive labels based on the uploaded filenames. They are not confirmed BSS SKU names or technical specifications. Confirm exact model names, dimensions, finishes and pricing with BSS before publishing those details.
+
+
+## Image optimisation
+The product photos are stored as WebP for responsive web delivery. Original uploaded ZIP archives were not modified.
+
+
+## Latest product photography update
+
+The current project includes optimised WebP photography supplied by BSS:
+- 16 office chair images
+- 4 cafe / breakout chair images (shown at the bottom of Office Chairs)
+- 21 workstation and table images
+- 10 office storage images
+
+The product image files are stored in `public/images/products/`. The image gallery data is maintained in `data/gallery.ts`. The official BSS logo is included as a lossless WebP asset.
+
+## Updating the GitHub branch safely
+
+1. Extract this ZIP on your computer.
+2. Open the existing GitHub repository and switch to the `nextjs-build` branch.
+3. Use GitHub's **Add file → Upload files** and upload the *contents* of the extracted project folder (not the ZIP itself and not an extra enclosing folder).
+4. Allow matching files to be replaced when GitHub asks. Existing product-image paths have been reused where possible so older photographs are overwritten rather than left as duplicate files.
+5. Commit the changes to `nextjs-build` only. Do not merge into `main` until the preview has been checked.
+
+All product photographs have been converted to WebP for a smaller deployment while retaining their original proportions. The ZIP itself is a delivery package; GitHub's web uploader expects the extracted files and folders.
